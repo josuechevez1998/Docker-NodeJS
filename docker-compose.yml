@@ -5,20 +5,7 @@ services:
       - "${APP_PORT}:${APP_PORT}"
     env_file:
       - .env
-    depends_on:
-      - mongo
     volumes:
       - .:/app
       - /app/node_modules
     restart: always
-
-  mongo:
-    image: mongo:5
-    ports:
-      - "27017:27017"
-    volumes:
-      - mongo-data:/data/db
-    restart: always
-
-volumes:
-  mongo-data:
