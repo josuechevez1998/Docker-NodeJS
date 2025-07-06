@@ -1,0 +1,11 @@
+# Ignorar dependencias de Node
+node_modules/
+src/node_modules/
+
+# Logs
+logs
+*.log
+
+# Sistema
+.DS_Store
+.env
