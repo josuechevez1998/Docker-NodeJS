@@ -2,6 +2,7 @@ const express = require('express');
 const dotenv = require('dotenv');
 
 class Server {
+    
     constructor() {
         dotenv.config();
         this.app = express();
