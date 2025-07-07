@@ -1,11 +1,13 @@
 const express = require('express');
-const dotenv = require('dotenv');
 
 class Server {
-    
+
     constructor() {
-        dotenv.config();
+
         this.app = express();
+
+        this.app.use(express.json()); 
+
         this.port = process.env.APP_PORT || 3000;
 
         this.routes(); // cargar rutas
