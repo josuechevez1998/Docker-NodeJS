@@ -1,8 +1,8 @@
-// routers/users.js
+const express = require('express');
 const UserController = require('../controller/userController');
 
-module.exports = (app) => {
+module.exports = (router) => {
     // Definir todas las rutas aquí
-    app.get('/users', UserController.index);
-    app.post('/users/store', UserController.store);
+    router.get('/users', UserController.index);
+    router.post('/users/store', UserController.store);
 };

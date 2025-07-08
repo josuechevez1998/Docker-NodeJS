@@ -5,7 +5,7 @@ class UserController {
 
     async index(req, res) {
         const users = await userModel.select();
-        res.json(users);
+        return res.json(users).status(200);
     }
 
     async store(req, res) {
